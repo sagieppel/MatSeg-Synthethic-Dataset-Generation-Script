@@ -1,4 +1,4 @@
-# MatSeg Material Segmentation dataset generation script: Generate Images with materials distributed on objects using natural patterns and their segmentation maps
+# MatSeg Material Segmentation dataset generation script: Generate Images with materials distributed on objects and their segmentation maps
 Generation script for the MatSeg Dataset for zero-shot class-agnostic material states segmentation.
 This script will procedurally generate images dataset of multiple materials  distrubuted on object surfaces. 
 The distribution will be determined by patterns extracted from natural images and their segmentation maps. 
