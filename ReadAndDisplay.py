@@ -1,4 +1,4 @@
-# Read and display the MatSeg Dataset
+# Read and display the generated MatSeg Dataset
 import cv2
 import numpy as np
 import os
