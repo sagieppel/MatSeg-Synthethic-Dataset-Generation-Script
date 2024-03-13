@@ -1,16 +1,18 @@
 # MatSeg Material Segmentation dataset generation script: Generate Images with materials distributed on objects and their segmentation maps
 Generation script for the MatSeg Dataset for zero-shot class-agnostic material states segmentation.
-This script will procedurally generate images dataset of multiple materials  distrubuted on object surfaces. 
+This script will procedurally generate an image dataset of multiple materials  distributed on object surfaces. 
 The distribution will be determined by patterns extracted from natural images and their segmentation maps. 
 
 See the paper [Learning Zero-Shot Material States Segmentation, by Implanting Natural Image Patterns in Synthetic Data](https://arxiv.org/pdf/2403.03309.pdf) for more details. 
 
+The generated dataset (generated using this script) can be found  here: [1](https://e.pcloud.link/publink/show?code=kZHCcnZOfzqInb3anSl7xzFBoqCDmkr2JKV),[2](https://icedrive.net/s/SBb3g9WzQ5wZuxX9892Z3R4bW8jw)
+
 ## What does this generate?
 
-Generate the MatSim Dataset for class independent zero-shot material segmentation: Random materials  distributed on scene and object according to natural patterns.
-It will take set of natural images and extract patterns from them it will use this patterns to map set of random materials to random object surfaces. 
-The resulting data set can be used to train net for Zero-Shot Material Segmentation (segmentation of material and their states without needing to ever encounter the material class during training).
-The general concept shown in Figures 1/2 and described in: [Learning Zero-Shot Material States Segmentation, by Implanting Natural Image Patterns in Synthetic Data](https://arxiv.org/pdf/2403.03309.pdf) 
+Generate the MatSim Dataset for class-independent zero-shot material segmentation: Random materials  distributed on scene and object according to natural patterns.
+It will take a set of natural images and extract patterns from them it will use these patterns to map a set of random materials to random object surfaces. 
+The resulting data set can be used to train the net for Zero-Shot Material Segmentation (segmentation of material and their states without needing to ever encounter the material class during training).
+The general concept shown in Figures 1/2 and described in [Learning Zero-Shot Material States Segmentation, by Implanting Natural Image Patterns in Synthetic Data](https://arxiv.org/pdf/2403.03309.pdf) 
 ![Figure 1](/Figure1.jpg)
 ![Figure 2](/Figure2.jpg)
 
@@ -62,7 +64,7 @@ ObjectFolder = Path to the folder containing the object files (for example, shap
 
 OutFolder = path to output folder where generated dataset will be saved
 
-pbr_folders  = path to a folders containing the PBRs textures subfolders
+pbr_folders  = path to a folder containing the PBRs textures subfolders
 
 natural_image_dir = folder with natural images from which patterns will be extracted and will be used as UV maps.
 
@@ -74,13 +76,13 @@ For other parameters, see the documentation within the code.
 
 ## Rendering Parameters
 
-This control rendering speed image quality and hardware use and are define in section:"Rendering engine parameters" 
+This control rendering speed image quality and hardware use and are defined in section:"Rendering engine parameters" 
  
 # Input folder structure:
 See sample folders for example:
 
 ## Object Folder structure.
-The object folder should contain the object in .obj or .gtlf format in the main folder or subfolder  of the .Obj  just using the Shapenet dataset as is should work. There are, in some cases, advantages in first converting the object to GTLF  format since its blender have some issue with obj materials.
+The object folder should contain the object in .obj or .gtlf format in the main folder or subfolder  of the .Obj  just using the Shapenet dataset as it should work. There are, in some cases, advantages in first converting the object to GTLF  format since its blender have some issues with obj materials.
 But this is not essential.
 
 ## HDRI folder
@@ -108,7 +110,7 @@ In the “Input parameters” of "Main" DatasetGeneration  script (last section 
 
 
 # Dealling with blender slowing done memory  issues and crashes
-Given Blender’s tendency to crash, running this script alone can be problematic for large dataset creation. To avoid the need to restart the program every time Blender crashes, use the shell script Run.sh. This script will run the blender file in a loop, so it will restart every time Blender crashes (and continue from the last set). This can be run from shell/cmd/terminal: using: sh Run.sh. 
+Given Blender’s tendency to crash, running this script alone can be problematic for large dataset creation. To avoid the need to restart the program every time Blender crashes, use the shell script Run.sh. This script will run the blender file in a loop, so it will restart every time Blender crashes (and continues from the last set). This can be run from shell/cmd/terminal: using: sh Run.sh. 
 Also, in some case blender doesn't crash but  can start getting slower and slower, one way to solve it is to exit the blender once in  a while. Setting the parameter: use_priodical_exits
 In the main.py to True, will cause Blender to exist every 10 sets. If this is run inside Run.sh blender will be immediately restarted and will start working cleanly. 
 
@@ -121,7 +123,7 @@ In the main.py to True, will cause Blender to exist every 10 sets. If this is ru
 
 
 # Sources for objects/HDRI/PBR materials
-1) Objects were taken from [Shapenet](https://shapenet.org/)/[ObjaVerse](https://objaverse.allenai.org/). Blender has some issue with reading the  shapenet ".obj" files directly, so it might be easier (but not essential) to convert to GTLF format using the AddionalScripts\ConvertShapeNet.py script supplied. See [https://github.com/CesiumGS/obj2gltf](https://github.com/CesiumGS/obj2gltf).
+1) Objects were taken from [Shapenet](https://shapenet.org/)/[ObjaVerse](https://objaverse.allenai.org/). Blender has some issues with reading the  shapenet ".obj" files directly, so it might be easier (but not essential) to convert to GTLF format using the AddionalScripts\ConvertShapeNet.py script supplied. See [https://github.com/CesiumGS/obj2gltf](https://github.com/CesiumGS/obj2gltf).
 
 3) HDRI backgrounds were downloaded from [PolyHaven](https://polyhaven.com/)
 4) PBR materials textures were downloaded from [AmbientCg](https://ambientcg.com/) and [FreePBR](https://freepbr.com/) and [cgbookcases](https://www.cgbookcase.com/).
