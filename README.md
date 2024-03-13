@@ -5,7 +5,7 @@ The distribution will be determined by patterns extracted from natural images an
 
 See the paper [Learning Zero-Shot Material States Segmentation, by Implanting Natural Image Patterns in Synthetic Data](https://arxiv.org/pdf/2403.03309.pdf) for more details. 
 
-The generated dataset (generated using this script) can be found  here: [1](https://e.pcloud.link/publink/show?code=kZHCcnZOfzqInb3anSl7xzFBoqCDmkr2JKV),[2](https://icedrive.net/s/SBb3g9WzQ5wZuxX9892Z3R4bW8jw)
+The generated dataset (generated using this script) can be found  at: [1](https://e.pcloud.link/publink/show?code=kZHCcnZOfzqInb3anSl7xzFBoqCDmkr2JKV),[2](https://icedrive.net/s/SBb3g9WzQ5wZuxX9892Z3R4bW8jw)
 
 ## What does this generate?
 
