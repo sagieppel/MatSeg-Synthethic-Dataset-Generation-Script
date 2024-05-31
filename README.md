@@ -13,8 +13,8 @@ Generate the MatSim Dataset for class-independent zero-shot material segmentatio
 It will take a set of natural images and extract patterns from them it will use these patterns to map a set of random materials to random object surfaces. 
 The resulting data set can be used to train the net for Zero-Shot Material Segmentation (segmentation of material and their states without needing to ever encounter the material class during training).
 The general concept shown in Figures 1/2 and described in [Learning Zero-Shot Material States Segmentation, by Implanting Natural Image Patterns in Synthetic Data](https://arxiv.org/pdf/2403.03309.pdf) 
-![Figure 1](Figure1.jpg)
-![Figure 2](Figure2.jpg)
+![Figure 1](/Figure1.jpg)
+![Figure 2](/Figure2.jpg)
 
 
 # What you need
