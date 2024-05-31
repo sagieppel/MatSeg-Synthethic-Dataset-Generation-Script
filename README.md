@@ -24,10 +24,7 @@ The script was run with Blender 4.0 with no add-ons, it can run with GPU or CPU 
 ## CGI Assets  
 Objects Folder, HDRI background folder, and a folder of PBR materials. Example folders are supplied as: “HDRI_BackGround”, “PBRMaterials”,“Objects”, "NaturalImages". 
 The script should run as is with these folders.
-
-However, if you want to create truly diverse data, you need a large number of backgrounds, objects, and PBR materials. This can be downloaded for free at:
-[PolyHaven](https://polyhaven.com/), [AmbientCg](https://ambientcg.com/), [Shapenet](https://shapenet.org/), [ObjaVerse](https://objaverse.allenai.org/)
-Note that the PBR folder should be in standard format for texture file names, for more details, see section PBR format. 
+[Shapenet](https://shapenet.org/), [ObjaVerse](https://objaverse.allenai.org/)
 Another input is  a folder of images from which the patterns will be extracted and injected to the scene. Images from  [apple/DMS](https://github.com/apple/ml-dms-dataset) dataset are good  images for this.
 
 
