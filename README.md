@@ -1,11 +1,13 @@
 # MatSeg Material Segmentation dataset generation script: Generate Images with materials distributed on objects and their segmentation maps
-Generation script for the MatSeg Dataset for zero-shot class-agnostic material states segmentation.
-This script will procedurally generate an image dataset of multiple materials  distributed on object surfaces. 
-The distribution will be determined by patterns extracted from natural images and their segmentation maps. 
+Generation script for the MatSeg 3D Dataset for zero-shot class-agnostic material states segmentation.
+This script will use Blender+python procedurally generate an image dataset of multiple materials  distributed on object surfaces using pattern infusion method. 
+The distribution/mapping of the materials will be determined by patterns extracted from natural images and their segmentation maps. 
 
 See the paper [Learning Zero-Shot Material States Segmentation, by Implanting Natural Image Patterns in Synthetic Data](https://arxiv.org/pdf/2403.03309.pdf) for more details. 
 
 The generated dataset (generated using this script) can be found  at: [1](https://e.pcloud.link/publink/show?code=kZHCcnZOfzqInb3anSl7xzFBoqCDmkr2JKV),[2](https://icedrive.net/s/SBb3g9WzQ5wZuxX9892Z3R4bW8jw)
+
+The code for generating the MatSeg2D dataset can be found at [this url](https://github.com/sagieppel/MatSeg2D-generation-code/tree/main).
 
 ## What does this generate?
 
